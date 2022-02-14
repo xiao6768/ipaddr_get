@@ -1,0 +1,20 @@
+project(test_ip LANGUAGES CXX C)
+cmake_minimum_required(VERSION 2.9)
+
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LANGUAGE_STANDARD "c++17")
+
+add_definitions(-g)
+add_definitions(-Wall -fPIC)
+
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)  
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/config")
+
+
+
+
+add_executable(${PROJECT_NAME} getip.cpp main.cpp)
